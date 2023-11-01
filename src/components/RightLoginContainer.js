@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import "../App.css";
 import { AiFillEyeInvisible } from 'react-icons/ai';
+
 export default function RightLoginContainer() {
 
     const [password, setPassword] = useState('');
@@ -19,14 +19,14 @@ export default function RightLoginContainer() {
         <div className='right_container'>
             <h1>Login</h1>
             <div className='input_container mb-3'>
-                <label for="exampleFormControlInput1" className="form-label">Login ID</label>
+                <label htmlFor="exampleFormControlInput1" className="form-label">Login ID</label>
                 <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="Enter Login ID" />
             </div>
             <div className='input_container'>
-                <label for="exampleFormControlInput1" className="form-label">Password</label>
+                <label htmlFor="exampleFormControlInput1" className="form-label">Password</label>
 
                 <div className="password-input">
-                    <input type={showPassword ? 'text' : 'password'} className="form-control" id="exampleFormControlInput1" placeholder="Enter Password" onChange={(e) => setPassword(e.target.value)} />
+                    <input type={showPassword ? 'text' : 'password'} className="form-control" id="exampleFormControlInput2" placeholder="Enter Password" onChange={(e) => setPassword(e.target.value)} />
 
                     <i
                         className={`eye-icon ${showPassword ? 'visible' : ''}`}
@@ -41,13 +41,13 @@ export default function RightLoginContainer() {
                 <div className='check_box_left_container'>
                     <div className="form-check">
                         <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                        <label className="form-check-label" for="flexCheckDefault">
+                        <label className="form-check-label"htmlFor="flexCheckDefault">
                             Remember Me
                         </label>
                     </div>
                     <div className="form-check">
                         <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked" />
-                        <label className="form-check-label" for="flexCheckChecked">
+                        <label className="form-check-label"htmlFor="flexCheckChecked">
                             Agree to <a href='www.youtube.com'>Terms & Conditions</a>
                         </label>
                     </div>
